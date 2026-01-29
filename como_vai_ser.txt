@@ -1,11 +1,31 @@
-- Fazer login em todas as máquinas
-- Clonar em C:\Insight Files
-- Transferir arquivos 
-    - script_inicio_dia.cmd
-    - script_inicio_cada_oficina.cmd
-    - app_aluno.py
-    - .env 
-para a pasta C:\Insight Files
-- No começo do dia, executar o script script_inicio_dia uma única vez, criando o diretório handson no Desktop, ambiente virtual Python, ativando e instalando openai
-- No começo de cada oficina, executar o script_inicio_cada_oficinal.cmd, matando o code, apagando o app_aluno_anterior, copiando um novo e abrindo code
-- Na primeira vez, clicar em confio, instalar a extensão Python e fechar a aba welcome
+- Criar uma pasta print na Documents
+
+- Vincular o VS COde à pasta print
+
+- Clicar File >> Auto Save
+
+- Clonar na print ( com .)
+
+- Abrir o .env.example e clicar File >> Save As, salvando como .env
+
+- Colocar a chave do ChatGPT no  .env
+
+- Abrir um terminal CMD na pasta print do VS Code e executar script_inicio_dia.cmd
+python -m venv venv
+call venv\Scripts\activate.bat
+pip install openai
+pip install python-dotenv
+code --install-extension ms-python.python
+
+- CTRL + , e mudar para o modo JSON. Lá final, antes de terminar o json raiz, colocar
+
+{
+    "files.autoSave": "afterDelay",
+        "files.exclude": {
+        ".env*": true,
+        ".gitignore": true,
+        "venv": true
+    }
+}
+
+- CTRL + SHIFT + P e buscar por >Python: Select Interpreter. Enter Interpreter Path >> Find. Entra na venv/Scripts, selecionar python
